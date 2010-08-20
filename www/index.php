@@ -65,7 +65,7 @@ Features of this book that help distinguish it from other books available for su
 course include 
 <ul>
 <li>
-The use of R, a free software environment for statistical computing and graphics, 
+The <strong>use of R</strong>, a free software environment for statistical computing and graphics, 
 throughout the text. 
 Many books claim to integrate technology, but often technology appears 
 to be more of an afterthought. In this book, topics are selected, ordered, and 
@@ -86,14 +86,14 @@ MacBook Pro running OS X (version 10.5.8) and the current version of R
 (2.11). Results using a different computing platform or different version of R 
 should be similar. 
 <li>
-An emphasis on practical statistical reasoning. 
+An emphasis on <strong>practical statistical reasoning</strong>. 
 The idea of a statistical study is introduced early on using Fisher’s famous 
 example of the lady tasting tea. Numerical and graphical summaries of data 
 are introduced early to give students experience with R and to allow them 
 to begin formulating statistical questions about data sets even before formal 
 inference is available to help answer those questions. 
 <li>
-Probability for statistics. 
+<strong>Probability for statistics</strong>. 
 One model for the undergraduate mathematical statistics sequence presents 
 a semester of probability followed by a semester of statistics. In this book, 
 I take a different approach and get to statistics early, developing the 
@@ -112,7 +112,7 @@ a student who only takes the first semester of a two-semester sequence will
 have a solid understanding of inference for one variable – either quantitative 
 or categorical. 
 <li>
-The linear algebra middle road. 
+The <strong>linear algebra middle road</strong>. 
 Linear models (regression and ANOVA) are treated using a geometric, 
 vector-based approach. A more common approach at this level is to intro- 
 duce these topics without referring to the underlying linear algebra. Such an 
