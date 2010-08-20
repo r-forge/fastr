@@ -128,6 +128,10 @@ the typical student in my course.
 
 <h2>Brief Outline of the book</h2>
 <p>
+<a href="http://www.calvin.edu/~rpruim/fast/amsfast-toc.pdf">Table of Contents</a> [pdf]
+</p>
+
+<p>
 The first four chapters of this book introduce important ideas in statistics (distributions, 
 variability, hypothesis testing, confidence intervals) while developing a 
 mathematical and computational toolkit. I cover this material in a one-semester 
@@ -138,6 +142,8 @@ my course so that stopping half-way makes some sense, I am finding that more
 of my students are continuing on to the second semester. My sample size is still 
 small, but I hope that the trend continues, and would like to think it is due in part 
 because the students are enjoying the course and can see “where it is going.” 
+</p>
+<p>
 The last three chapters deal primarily with two important methods for handling 
 more complex statistical models: maximum likelihood and linear models (including 
 regression, ANOVA, and an introduction to generalized linear models). This is not 
@@ -153,6 +159,9 @@ to investigate robustness, a few examples of permutations tests, and a discussio
 of Bradley-Terry models. The latter topic is one that I cover between Selection 
 Sunday and the beginning of the NCAA Division I Basketball Tournament each 
 year. An application of the method to the 2009–2010 season is included. 
+</p>
+
+<p>
 Various R functions and methods are described as we go along, and Appendix A 
 provides an introduction to R focusing on the way R is used in the rest of the book. 
 I recommend that you work through Appendix A simultaneously with first chapter 
