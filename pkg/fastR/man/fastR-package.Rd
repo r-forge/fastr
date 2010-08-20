@@ -13,7 +13,7 @@ by Randall Pruim.
 \tabular{ll}{
 Package: \tab fastR\cr
 Type: \tab Package\cr
-Version: \tab 0.1-30\cr
+Version: \tab 0.1-31\cr
 Date: \tab 2010-08-19\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
