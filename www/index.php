@@ -149,6 +149,9 @@ more complex statistical models: maximum likelihood and linear models (including
 regression, ANOVA, and an introduction to generalized linear models). This is not 
 a comprehensive treatment of these topics, of course, but I hope it both provides 
 flexible, usable statistical skills and prepares students for further learning. 
+</p>
+
+<p>
 Chi-squared tests for goodness of fit and for two-way tables using both the 
 Pearson and likelihood ratio test statistics are covered after first generating empirical 
 p-values based on simulations. The use of simulations here reinforces the 
