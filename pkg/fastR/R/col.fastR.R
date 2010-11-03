@@ -1,5 +1,5 @@
 col.fastR <-
-function (bw = FALSE) 
+function (bw = FALSE, lty = 1:7) 
 {
     aBlue <- colorRampPalette(c("white", "navy"))(10)[8]
     paleBlue <- colorRampPalette(c("white", "navy"))(10)[6]
@@ -9,14 +9,16 @@ function (bw = FALSE)
     paleGreen <- colorRampPalette(c("white", "darkGreen"))(10)[8]
     if (bw) {
         return(list(background = list(col = "transparent"), plot.polygon = list(col = "gray80"), 
-            box.rectangle = list(col = "gray30"), box.umbrella = list(col = "gray30"), 
-            dot.line = list(col = "gray50"), dot.symbol = list(col = "gray30", 
+            box.rectangle = list(col = "gray50"), box.umbrella = list(col = "gray50", 
+                lty = 1), dot.line = list(col = "gray50"), dot.symbol = list(col = "gray30", 
                 pch = 16), plot.line = list(col = "gray30", lwd = 2), 
             plot.symbol = list(col = "gray30", pch = 16), regions = list(col = gray((1:100)/100)), 
             reference.line = list(col = "gray50"), add.line = list(lty = 1, 
-                col = "gray20", lwd = 2), superpose.line = list(lty = 1:7, 
-                lwd = 2, col = c("gray30", "gray70", "gray50", 
-                  "black", "gray20", "gray80", "gray60", "gray40")), 
+                col = "gray80", lwd = 2), superpose.polygon = list(col = c("gray30", 
+                "gray70", "black", "gray50", "gray20", "gray80", 
+                "gray60", "gray40")), superpose.line = list(lty = lty, 
+                lwd = 2, col = c("gray30", "gray70", "black", 
+                  "gray50", "gray20", "gray80", "gray60", "gray40")), 
             superpose.symbol = list(pch = c(16, 15, 18, 1, 3, 
                 6, 0, 5), cex = rep(0.7, 7), col = c("gray30", 
                 "gray70", "gray50", "black", "gray20", "gray80", 
@@ -31,7 +33,7 @@ function (bw = FALSE)
                 pch = 16), plot.line = list(lwd = 2, col = darkBlue), 
             plot.symbol = list(col = darkBlue, pch = 16), regions = list(col = heat.colors(100)), 
             reference.line = list(col = "#e8e8e8"), add.line = list(lty = 1, 
-                col = "gray20", lwd = 2), superpose.line = list(lty = 1:7, 
+                col = "gray20", lwd = 2), superpose.line = list(lty = lty, 
                 lwd = 2, col = c(darkBlue, "lightskyblue3", "darkgreen", 
                   "turquoise", "orange", "purple", "pink", "lightgreen")), 
             superpose.symbol = list(pch = c(16, 15, 18, 1, 3, 

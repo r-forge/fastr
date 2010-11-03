@@ -1,5 +1,6 @@
 \name{deathPenalty}
 \alias{deathPenalty}
+\alias{deathPen}
 \docType{data}
 \title{ Death Penalty and Race }
 \description{
@@ -8,12 +9,17 @@ A famous example of Simpson's paradox.
 %%  ~~ A concise (1-5 lines) description of the dataset. ~~
 }
 \usage{data(deathPenalty)}
+\usage{data(deathPeny)}
 \format{
-  A data frame with 326 observations on the following 3 variables.
+  A data frame with 326 observations.  The factors are coded more succinctly
+  in \code{deathPen}, but otherwise the data are the same.
   \describe{
+    \item{\code{DeathPenalty}}{a factor with levels \code{Yes} \code{No}}
     \item{\code{Penalty}}{a factor with levels \code{Death} \code{Not}}
-    \item{\code{Victim}}{a factor with levels \code{Black} \code{White}}
-    \item{\code{Defendant}}{a factor with levels \code{Black} \code{White}}
+    \item{\code{Victim}}{a factor with levels \code{Black} \code{White} 
+	(or \code{Bl} \code{Wh})}
+    \item{\code{Defendant}}{a factor with levels \code{Black} \code{White}
+	(or \code{Bl} \code{Wh})}
   }
 }
 \source{

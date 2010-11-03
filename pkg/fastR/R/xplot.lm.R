@@ -5,13 +5,14 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
     sub.caption = NULL, main = "", print.plots = TRUE, ask = 1 < 
         length(which) && dev.interactive(), type = "p", pch = trellis.par.get("plot.symbol")$pch, 
     addline.col = trellis.par.get("add.line")$col, line.col = trellis.par.get("plot.line")$col, 
-    symbol.col = trellis.par.get("plot.symbol")$col, ..., id.n = 3, 
-    labels.id = names(residuals(x)), cex.id = 0.7, qqline = TRUE, 
-    cook.levels = c(0.5, 1), add.smooth = TRUE, label.pos = c("left", 
-        "right"), cex.caption = 1) 
+    symbol.col = trellis.par.get("plot.symbol")$col, lty = trellis.par.get("superpose.line")$lty, 
+    ..., id.n = 3, labels.id = names(residuals(x)), cex.id = 0.7, 
+    qqline = TRUE, cook.levels = c(0.5, 1), add.smooth = TRUE, 
+    label.pos = c("left", "right"), cex.caption = 1) 
 {
+    lty = rep(lty, 5)
     old.theme <- trellis.par.get()
-    trellis.par.set(list(add.line = list(col = addline.col), 
+    trellis.par.set(list(superpose.line = list(lty = lty), add.line = list(col = addline.col), 
         plot.line = list(col = line.col), plot.symbol = list(col = symbol.col), 
         par.main.text = list(cex = 0.9), par.sub.text = list(cex = 0.8)))
     results <- list()
@@ -118,7 +119,8 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
             ylim = ylim, type = "n", main = if (one.fig) 
                 getCaption(1)
             else NULL, panel = function(x, y) {
-                panel.abline(h = 0, lwd = 2, lty = 3, col = "gray20")
+                panel.abline(h = 0, lwd = 2, lty = trellis.par.get("add.line")$lty, 
+                  col = trellis.par.get("add.line")$col)
                 panel.xyplot(x, y, ...)
                 if (id.n > 0) {
                   grid.identify.points(x, y, show.r, cex = cex.id)
@@ -135,7 +137,8 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
             sub.caption
         else NULL, panel = function(x, ...) {
             if (qqline) {
-                panel.qqmathline(x, lty = 3, lwd = 2, ...)
+                panel.qqmathline(x, lty = trellis.par.get("add.line")$lty, 
+                  lwd = 2, ...)
             }
             panel.qqmath(x, pch = 16, ...)
             if (id.n > 0) 
@@ -230,8 +233,8 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                     panel.default(x, y, line.col = line.col, 
                       ...)
                     panel.abline(v = ff[1L] * (0:nlev[1L]) - 
-                      1/2, col = addline.col, lty = 4)
-                    panel.abline(h = 0, lty = 3, col = addline.col)
+                      1/2, col = addline.col, lty = lty[4])
+                    panel.abline(h = 0, lty = lty[3], col = addline.col)
                   }, ...)
                 results <- c(results, list(newplot))
             }
@@ -252,7 +255,7 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                 else NULL, sub = if (one.fig) 
                   sub.caption
                 else NULL, panel = function(x, y, model = x...) {
-                  panel.abline(h = 0, v = 0, lty = 3, col = trellis.par.get("add.line")$col)
+                  panel.abline(h = 0, v = 0, lty = lty[3], col = trellis.par.get("add.line")$col)
                   if (length(cook.levels)) {
                     p <- length(coef(model))
                     xscale <- current.viewport()$xscale
@@ -261,15 +264,15 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                       max(xscale), length.out = 101)
                     for (crit in cook.levels) {
                       cl.h <- sqrt(crit * p * (1 - hh)/hh)
-                      llines(hh, cl.h, lty = 2, col = addline.col)
-                      llines(hh, -cl.h, lty = 2, col = addline.col)
+                      llines(hh, cl.h, lty = lty[2], col = addline.col)
+                      llines(hh, -cl.h, lty = lty[2], col = addline.col)
                     }
                     grid.text("Cook's dist.", x = unit(3, "char"), 
                       y = unit(0.5, "lines"), just = c("left", 
                         "bottom"), gp = gpar(cex = 0.8, lyt = 2))
                     grid.lines(x = unit(c(0.5, 2.5), "char"), 
                       y = unit(0.7, "lines"), gp = gpar(col = addline.col, 
-                        lty = 2, lwd = 2))
+                        lty = lty[2], lwd = 2))
                     xmax <- min(0.99, max(xscale))
                     ymult <- sqrt(p * (1 - xmax)/xmax)
                     aty <- c(-sqrt(rev(cook.levels)) * ymult, 
@@ -326,7 +329,7 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                   if (ymax > bi2 * xmax) {
                     xi <- xmax
                     yi <- bi2 * xi
-                    panel.abline(0, bi2, lty = 3, line.col = addline.col)
+                    panel.abline(0, bi2, lty = lty[3], line.col = addline.col)
                     grid.text(paste(bval[i]), unit(1, "npc") + 
                       unit(0.3, "char"), yi, default.units = "native", 
                       just = c("left", "center"), gp = gpar(cex = 0.8, 
@@ -335,7 +338,7 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                   else {
                     yi <- ymax
                     xi <- yi/bi2
-                    panel.abline(0, bi2, lty = 3, line.col = addline.col)
+                    panel.abline(0, bi2, lty = lty[3], line.col = addline.col)
                     grid.text(paste(bval[i]), xi, unit(1, "npc") + 
                       unit(0.25, "char"), default.units = "native", 
                       just = c("center", "bottom"), gp = gpar(cex = 0.8, 
