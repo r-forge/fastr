@@ -16,5 +16,5 @@ favstats(x, na.rm = TRUE)
 \examples{
 favstats(1:10)
 favstats(faithful$eruptions)
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+}
+% add key words?
