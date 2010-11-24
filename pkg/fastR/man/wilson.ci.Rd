@@ -1,4 +1,4 @@
-\name{Wilsonci}
+\name{wilson.ci}
 \alias{wilson.ci}
 \alias{wald.ci}
 \title{Confidence Intervals for Proportions}

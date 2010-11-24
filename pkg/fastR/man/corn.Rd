@@ -21,7 +21,8 @@ plots, accounting for 11 pairs of "split" plots.
 }
 
 \source{
-These data are also available at DASL (\url{http://lib.stat.cmu.edu/DASL/}).
+These data are also available at DASL, the data and story library
+(\url{http://lib.stat.cmu.edu/DASL/}).
 }
 \references{
 W.S. Gosset, "The Probable Error of a Mean," Biometrika, 6 (1908), pp 1-25.

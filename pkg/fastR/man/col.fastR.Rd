@@ -25,6 +25,9 @@ of the book \cite{Foundations and Applications of Statistics}
 \code{\link{show.settings()}} 
 }
 \examples{
+trellis.par.set(theme=col.fastR(bw=TRUE))
+show.settings()
 trellis.par.set(theme=col.fastR())
+show.settings()
 }
 \keyword{ graphics }
