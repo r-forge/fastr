@@ -51,6 +51,5 @@ distributed randomly to the students.
 data(littleSurvey)
 xtabs(~surprise+surpriseVer,littleSurvey)
 xtabs(~disease+diseaseVer,littleSurvey)
-## maybe str(littleSurvey) ; plot(littleSurvey) ...
 }
 \keyword{datasets}

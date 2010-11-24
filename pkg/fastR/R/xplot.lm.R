@@ -277,8 +277,8 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                     ymult <- sqrt(p * (1 - xmax)/xmax)
                     aty <- c(-sqrt(rev(cook.levels)) * ymult, 
                       sqrt(cook.levels) * ymult)
-                    pushViewport(viewport(clip = "off", xscale = current.viewport()$xscale, 
-                      yscale = current.viewport()$yscale))
+                    pushViewport(viewport(clip = "off", name = "unclipped5", 
+                      xscale = current.viewport()$xscale, yscale = current.viewport()$yscale))
                     waty <- which(aty <= max(yscale) & aty >= 
                       min(yscale))
                     if (length(waty) > 0) {
@@ -319,8 +319,8 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                 sub.caption
             else NULL, ylab = "Cook's distance", xlab = expression("Leverage  " * 
                 h[ii]), panel = function(x, y, ...) {
-                pushViewport(viewport(clip = "off", xscale = current.viewport()$xscale, 
-                  yscale = current.viewport()$yscale))
+                pushViewport(viewport(clip = "off", name = "unclipped6", 
+                  xscale = current.viewport()$xscale, yscale = current.viewport()$yscale))
                 bval <- pretty(sqrt(p * cook/g), 5)
                 xmax <- max(current.viewport()$xscale)
                 ymax <- max(current.viewport()$yscale)
@@ -345,21 +345,21 @@ function (x, which = c(1L:3, 5), caption = list("Residuals vs Fitted",
                         col = addline.col))
                   }
                 }
-                upViewport()
                 panel.default(x, y, line.col = line.col, ...)
                 if (id.n > 0) {
                   show.r <- order(-cook)[iid]
                   grid.identify.points(g, cook, show.r, cex = cex.id)
                 }
+                upViewport()
             }, ...)
         results <- c(results, list(newplot))
     }
-    trellis.par.set(theme = old.theme)
     if (print.plots) {
         for (p in results) {
             print(p)
         }
     }
+    trellis.par.set(theme = old.theme)
     if (length(results) == 1) {
         invisible(results[[1]])
     }

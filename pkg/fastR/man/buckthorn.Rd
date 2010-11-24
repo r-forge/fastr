@@ -21,6 +21,5 @@ the plant had regrown.
 \source{David Dornbos, Calvin College}
 \examples{
 data(buckthorn)
-## maybe str(buckthorn) ; plot(buckthorn) ...
 }
 \keyword{datasets}

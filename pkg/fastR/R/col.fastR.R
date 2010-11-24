@@ -8,15 +8,17 @@ function (bw = FALSE, lty = 1:7)
     darkBlue <- colorRampPalette(c("white", "navy"))(10)[9]
     paleGreen <- colorRampPalette(c("white", "darkGreen"))(10)[8]
     if (bw) {
-        return(list(background = list(col = "transparent"), plot.polygon = list(col = "gray80"), 
-            box.rectangle = list(col = "gray50"), box.umbrella = list(col = "gray50", 
-                lty = 1), dot.line = list(col = "gray50"), dot.symbol = list(col = "gray30", 
-                pch = 16), plot.line = list(col = "gray30", lwd = 2), 
-            plot.symbol = list(col = "gray30", pch = 16), regions = list(col = gray((1:100)/100)), 
+        return(list(background = list(col = "transparent"), axis.line = list(col = "gray30"), 
+            axis.text = list(col = "gray30"), plot.polygon = list(col = "gray80"), 
+            box.rectangle = list(col = "gray10"), box.umbrella = list(col = "gray10", 
+                lty = 1), box.dot = list(col = "gray10"), dot.line = list(col = "gray50"), 
+            dot.symbol = list(col = "gray30", pch = 16), plot.line = list(col = "black", 
+                lwd = 2), plot.symbol = list(col = "black", fill = "gray80", 
+                pch = 16), regions = list(col = gray((1:100)/100)), 
             reference.line = list(col = "gray50"), add.line = list(lty = 1, 
                 col = "gray80", lwd = 2), superpose.polygon = list(col = c("gray30", 
                 "gray70", "black", "gray50", "gray20", "gray80", 
-                "gray60", "gray40")), superpose.line = list(lty = lty, 
+                "gray60", "gray40"), fill = c("gray80")), superpose.line = list(lty = lty, 
                 lwd = 2, col = c("gray30", "gray70", "black", 
                   "gray50", "gray20", "gray80", "gray60", "gray40")), 
             superpose.symbol = list(pch = c(16, 15, 18, 1, 3, 

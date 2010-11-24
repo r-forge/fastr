@@ -1,9 +1,7 @@
 \name{airlineArrival}
 \alias{airlineArrival}
 \docType{data}
-\title{
-Airline On-Time Arrival Data
-}
+\title{ Airline On-Time Arrival Data }
 \description{
 Flights categorized by destination city, airline, and whether or not the
 flight was on time.
