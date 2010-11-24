@@ -3,6 +3,8 @@
 \docType{data}
 \title{ Rat poison -- unfinished documentation }
 \description{
+Data from an experiment to see whether flavor and location of 
+rat poison influence the consumption by rats.
 }
 \usage{data(ratpoison)}
 \format{
@@ -12,12 +14,6 @@
     \item{\code{flavor}}{a factor with levels \code{bread} \code{butter-vanilla} \code{plain} \code{roast beef}}
     \item{\code{location}}{a factor with levels \code{A} \code{B} \code{C} \code{D} \code{E}}
   }
-}
-\details{
-}
-\source{
-}
-\references{
 }
 \examples{
 data(ratpoison)

@@ -1,7 +1,7 @@
 \name{airlineArrival}
 \alias{airlineArrival}
 \docType{data}
-\title{ Airline On-Time Arrival Data }
+\title{ Airline On-Time Arrival Data -- unfinished documentation}
 \description{
 Flights categorized by destination city, airline, and whether or not the
 flight was on time.
@@ -14,10 +14,6 @@ flight was on time.
     \item{\code{Result}}{a factor with levels \code{Delayed} \code{OnTime}}
     \item{\code{Airline}}{a factor with levels \code{Alaska} \code{AmericaWest}}
   }
-}
-\source{
-}
-\references{
 }
 \examples{
 row.perc(xtabs(~Airline+Result, airlineArrival))

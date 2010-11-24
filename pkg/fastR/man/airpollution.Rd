@@ -14,6 +14,8 @@ Air pollution measurements at three locations.
   }
 }
 \source{
+David J. Saville and Graham R. Wood, \emph{Statistical methods: A geometric 
+primer}, Springer, 1996. 
 }
 \examples{
 data(airpollution)

@@ -13,8 +13,6 @@ ACT scores and college GPA for a small sample of college students.
     \item{\code{GPA}}{a numeric vector}
   }
 }
-\source{
-}
 \examples{
 xyplot(GPA ~ ACT, actgpa)
 }

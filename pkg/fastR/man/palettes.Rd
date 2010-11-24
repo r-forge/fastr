@@ -31,6 +31,6 @@ anova(pal.lm2)
 xyplot(palettes~day,palettes,
 		groups=employee,
 		main="Productivity by day and employee",
-		type='b',auto.key=list(columns=4,points=F,lines=T))
+		type='b',auto.key=list(columns=4,points=FALSE,lines=TRUE))
 }
 \keyword{datasets}

@@ -5,10 +5,11 @@
 \docType{data}
 \title{NCAA Division I Basketball Results}
 
-%\description{
-%%%  ~~ A concise (1-5 lines) description of the dataset. ~~
-%}
-\usage{data(ncaa2010)
+\description{
+Results of NCAA basketball games
+}
+\usage{
+data(ncaa2010)
 
 data(ncaa2009)
 

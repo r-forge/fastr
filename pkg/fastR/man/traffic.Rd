@@ -2,6 +2,13 @@
 \alias{traffic}
 \docType{data}
 \title{ New England traffic fatalities (1951-1959) }
+\description{
+Used by Tufte as an example of the importance of context, these data show the
+traffic fatality rates in New England in the 1950s.  Connecticut increased
+enforcement of speed limits in 1956.  In their full context, it is difficult
+to say if the decline in Connecticut traffic fatalities from 1955 to 1956 can be 
+attributed to the stricter enforcement.
+}
 
 \usage{data(traffic)}
 \format{
@@ -14,13 +21,6 @@
     \item{\code{ma}}{deaths per 100,000 in Massachusetts}
     \item{\code{ri}}{deaths per 100,000 in in Rhode Island}
   }
-}
-\details{
-Used by Tufte as an example of the importance of context, these data show the
-traffic fatality rates in New England in the 1950s.  Connecticut increased
-enforcement of speed limits in 1956.  In their full context, it is difficult
-to say if the decline in Connecticut traffic fatalities from 1955 to 1956 can be 
-attributed to the stricter enforcement.
 }
 \source{
 Tufte, E. R.  \emph{The Visual Display of Quantitative Information}, 2nd ed. Graphics Press, 2001.
@@ -42,6 +42,6 @@ trafficLong <- reshape(traffic,direction='long', idvar="year",
 				varying=list(3:6), v.names='deathRate',
 				times=names(traffic)[3:6],timevar='state')
 xyplot(deathRate~year,groups=state,data=trafficLong,type='b',
-		auto.key=list(lines=T,points=F,columns=2))
+		auto.key=list(lines=TRUE,points=FALSE,columns=2))
 }
 \keyword{datasets}

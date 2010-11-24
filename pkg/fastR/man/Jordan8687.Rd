@@ -15,6 +15,6 @@ of the 1986-87 regular season.}
 }
 \examples{
 data(Jordan8687)
-qqmath(~Points,data=Jordan8687)
+xqqmath(~Points,data=Jordan8687)
 }
 \keyword{datasets}

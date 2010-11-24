@@ -28,7 +28,7 @@ Lafferty, M. B. (1993),
 }
 \examples{
 data(heliumFootballs)
-xyplot(Helium~Air,heliumFootballs)
-bwplot(Helium-Air,heliumFootballs)
+xyplot(Helium~Air, data=heliumFootballs)
+bwplot(~(Helium-Air), data=heliumFootballs)
 }
 \keyword{datasets}

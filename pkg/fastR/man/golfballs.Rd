@@ -14,9 +14,6 @@ were omitted from the data.
   The format is:
  num [1:4] 137 138 107 104
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{Data collected by Allan Rossman in Carlisle, PA. }
 \examples{
 data(golfballs)

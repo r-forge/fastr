@@ -52,7 +52,7 @@ removed.
 Dykstra, J. H., Hill, H. M., Miller, M. G., Michael T. J., Cheatham, C. C., and Baker,
 R.J., Comparisons of cubed ice, crushed ice, and wetted ice on intramuscular 
 and surface temperature changes, \emph{Journal of Athletic Training} 44 (2009), no. 2, 
-136–141. 
+136--141. 
 }
 
 \examples{

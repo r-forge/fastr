@@ -14,8 +14,6 @@ A cross-tabulation of whether a student smokes and how many of his or her parent
 	\code{BothSmoke} 
   }
 }
-\source{
-}
 \examples{
 data(familySmoking)
 xchisq.test( xtabs(~Parents + Student, familySmoking) )

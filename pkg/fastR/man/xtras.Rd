@@ -9,6 +9,9 @@
 \alias{xqqmath}
 \alias{xqqmath.formula}
 \alias{xqqmath.numeric}
+\alias{xqqmath.data.frame}
+\alias{panel.xqqmath}
+\alias{panel.xhistogram}
 \title{
 Augmented functions
 }
@@ -45,11 +48,17 @@ xpnorm(q, mean = 0, sd = 1, plot = TRUE, verbose = TRUE, digits = 5,
 xqnorm(p, mean = 0, sd = 1, plot = TRUE, verbose = TRUE, digits = 5, 
 	lower.tail = TRUE, log.p = FALSE, ...)
 
-xqqmath(x, ...)
+xqqmath(x, 
+...)
 
 xqqmath.formula(x, data = NULL, panel = panel.xqqmath, ...)
 
 xqqmath.numeric(x, data = NULL, ylab = deparse(substitute(x)), ...)
+
+panel.xqqmath(x, qqmathline = TRUE, idline = FALSE, fitline = FALSE, 
+    slope = sd(x), intercept = mean(x), overlines = FALSE, ..., 
+    lcol = trellis.par.get("add.line")$col, pch = 16, lwd = 2, 
+    lty = 2) 
 }
 \arguments{
   \item{\dots}{ arguments passed to other functions }
@@ -74,6 +83,9 @@ xqqmath.numeric(x, data = NULL, ylab = deparse(substitute(x)), ...)
   slope and intercept given by \code{slope} and \code{intercept}.
   }
 
+  \item{qqline}{boolean.  If TRUE, add a line using \code{panel.qqmathline()}. 
+  }
+
   \item{slope}{ slope for \code{fitline}.  
   Default value is the mean of the data, which works well
   for normal-quantile plots but may not be what you want for fitting
@@ -83,31 +95,51 @@ xqqmath.numeric(x, data = NULL, ylab = deparse(substitute(x)), ...)
   	Default value is the standard deviation of the data, which works well
 	for normal-quantile plots but may not be what you want for fitting
 	other distributions. }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
-
-  \item{}{ }
+\item{lcol}{like \code{col} but applied only to lines}
+\item{
+q,
+p,
+type,
+labels,
+which,
+main,
+ylab,
+pch,
+lwd,
+lty}{as in \code{\link{lattice}} graphics functions}
+\item{
+caption,
+fit,
+start,
+panel.default,
+sub.caption,
+print.plots,
+ask,
+addline.col,
+line.col,
+symbol.col,
+id.n,
+labels.id,
+cex.id,
+cook.levels,
+add.smooth,
+label.pos,
+cex.caption,
+mean,
+sd,
+plot,
+verbose,
+digits,
+lower.tail,
+log.p,
+data,
+panel
+}{ to be documented}
 }
-\value{
-}
+
 \author{
 Randall Pruim
 }
-\note{
-}
-
 
 \seealso{
 \code{\link{histogram}}, 

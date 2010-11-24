@@ -1,6 +1,7 @@
 xqqmath.numeric <-
 function (x, data = NULL, ylab = deparse(substitute(x)), ...) 
 {
+    require(lattice)
     ocall <- sys.call(sys.parent())
     ocall[[1]] <- quote(qqmath)
     ccall <- match.call()

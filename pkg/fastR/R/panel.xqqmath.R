@@ -4,6 +4,7 @@ function (x, qqmathline = TRUE, idline = FALSE, fitline = FALSE,
     lcol = trellis.par.get("add.line")$col, pch = 16, lwd = 2, 
     lty = 2) 
 {
+    require(lattice)
     lty <- rep(lty, length = 3)
     if (overlines) {
         panel.qqmath(x, ...)

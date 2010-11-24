@@ -45,8 +45,6 @@ distributed randomly to the students.
     \item{\code{homework}}{a factor with levels \code{A} \code{B}}
   }
 }
-\references{
-}
 \examples{
 data(littleSurvey)
 xtabs(~surprise+surpriseVer,littleSurvey)

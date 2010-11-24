@@ -13,8 +13,11 @@ by Randall Pruim.
 \tabular{ll}{
 Package: \tab fastR\cr
 Type: \tab Package\cr
-Version: \tab 0.1-31\cr
-Date: \tab 2010-08-19\cr
+Version: \tab 0.2-1\cr
+Date: \tab 2010-11-24\cr
+Depends: \tab lattice, grid\cr
+Suggests: \tab MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry  
+\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -48,5 +51,6 @@ and
 \code{\link[car:car-package]{car}} 
 }
 \examples{
-None yet.
+require(fastR)
+trellis.par.set(theme=col.fastR())
 }

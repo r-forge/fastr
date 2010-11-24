@@ -1,6 +1,7 @@
 ntigram <-
 function (x, bins = 12, name = deparse(substitute(x)), ...) 
 {
+    require(lattice)
     if (bins >= length(x)/3) {
         bins <- round(length(x)/3)
     }

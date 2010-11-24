@@ -41,6 +41,6 @@ Daniel T. Kaplan, \emph{Statistical modeling: A fresh approach}, 2009.
 \examples{
 data(utilities); data(utilities2)
 xyplot(gasbill ~ temp, utilities)
-xyplot(gasbillpday ~ temp, utilities)
+xyplot(gasbillpday ~ temp, utilities2)
 }
 \keyword{datasets}

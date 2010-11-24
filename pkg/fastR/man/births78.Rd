@@ -13,8 +13,6 @@ of the year 1978.}
     \item{\code{dayofyear}}{number of days since start of year}
   }
 }
-\source{
-}
 \examples{
 data(births78)
 xyplot(births ~ dayofyear, births78)

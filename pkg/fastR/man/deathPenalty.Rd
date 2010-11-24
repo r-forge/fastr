@@ -5,8 +5,6 @@
 \title{ Death Penalty and Race }
 \description{
 A famous example of Simpson's paradox.
-
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
 }
 \usage{data(deathPenalty)}
 \usage{data(deathPeny)}
@@ -24,9 +22,7 @@ A famous example of Simpson's paradox.
 }
 \source{
 Radelet, M. (1981). Racial characteristics and imposition of the 
-death penalty. \emph{American Sociological Review}, 46:918–927. 
-}
-\references{
+death penalty. \emph{American Sociological Review}, 46:918--927. 
 }
 \examples{
 xtabs(~Defendant+Penalty,deathPenalty)

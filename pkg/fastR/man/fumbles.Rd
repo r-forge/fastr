@@ -16,8 +16,6 @@ The number of fumbles in each NCAA IA football game on one weekend.
 	to a Poisson model}
   }
 }
-\source{
-}
 \examples{
 data(fumbles)
 }

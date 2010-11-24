@@ -14,9 +14,9 @@ stretched prior to launch.
     \item{\code{Distance}}{distance rubber band traveled }
   }
 }
-}
+
 \examples{
 data(rubberband)
-xyplot(Distance ~ Stretch, rubberband, type=c('p','r')
+xyplot(Distance ~ Stretch, rubberband, type=c("p","r"))
 }
 \keyword{datasets}

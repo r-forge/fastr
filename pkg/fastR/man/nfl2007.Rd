@@ -4,7 +4,7 @@
 \title{ NFL 2007 season }
 
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+Results of National Football League games (2007 season, including playoffs)
 }
 \usage{data(nfl2007)}
 \format{
@@ -18,12 +18,6 @@
     \item{\code{Line}}{`betting line'}
     \item{\code{TotalLine}}{'over/under' line (for combined score of both teams)}
   }
-}
-\details{
-}
-\source{
-}
-\references{
 }
 \examples{
 data(nfl2007); nfl <- nfl2007

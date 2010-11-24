@@ -40,6 +40,6 @@ Determinant for Children," Research Quarterly for Exercise and Sport, 63,
 \examples{
 data(kids)
 xtabs(~Goals + Urban.Rural, kids)
-chisq(xtabs(~Goals + Urban.Rural, kids))
+chisq.test(xtabs(~Goals + Urban.Rural, kids))
 }
 \keyword{datasets}

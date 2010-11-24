@@ -1,6 +1,6 @@
 \name{concrete}
-\alias{concrete}
-\alias{concrete1}
+\alias{concreteAll}
+\alias{concrete28}
 \docType{data}
 \title{Concrete Compressive Strength Data}
 \description{
@@ -9,11 +9,10 @@ compressive strength of concrete is related to its ingredients
 (cement, blast furnace slag, fly ash, water, superplasticizer, 
 coarse aggregate, and fine aggregate) and age.
 }
-\usage{data(concrete)
-       data(concrete1)
+\usage{data(concreteAll); data(concrete28)
 }
 \format{
-  \code{concrete} is a  data frame with 1030 observations on the following 9 variables.
+  \code{concreteAll} is a  data frame with the following 9 variables.
   \describe{
     \item{\code{cement}}{amount of cement (kg/m^3)}
     \item{\code{slag}}{amount of blast furnace slag (kg/m^3)}
@@ -25,7 +24,7 @@ coarse aggregate, and fine aggregate) and age.
     \item{\code{age}}{age of concrete in days }
     \item{\code{strength}}{compressive strength measured in MPa}
   }
-  \code{concrete1} is a  subset of \code{concrete1}.
+  \code{concrete28} is a subset of \code{concreteAll}.
 }
 \source{
 Data were obtained from the Machine Learning Repository 
@@ -40,6 +39,7 @@ neural networks,"
 \cite{Cement and Concrete Research}, Vol. 28, No. 12, pp. 1797-1808.
 }
 \examples{
-data(concrete)
+data(concreteAll)
+data(concrete28)
 }
 \keyword{datasets}

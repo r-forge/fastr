@@ -3,8 +3,7 @@
 \alias{HELPbig}
 \docType{data}
 \title{HELP -- Health Evaluation and Linkage to Primary Care}
-\description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+\description{ Data recorded for inpatient subjects at a detoxification unit.
 }
 \usage{data(HELP)}
 \usage{data(HELPbig)}

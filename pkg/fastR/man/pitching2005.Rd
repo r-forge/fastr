@@ -5,6 +5,7 @@
 Major League Baseball 2005 pitching
 }
 \description{
+Major League Baseball pitching statistics for the 2005 season.
 }
 \usage{data(pitching2005)}
 \format{
@@ -43,6 +44,6 @@ Major League Baseball 2005 pitching
 }
 \examples{
 data(pitching2005)
-xyplot(I(IPouts/3)) ~ W, pitching2005, ylab="innings pitched", xlab="wins")
+xyplot(IPouts/3 ~ W, pitching2005, ylab="innings pitched", xlab="wins")
 }
 \keyword{datasets}

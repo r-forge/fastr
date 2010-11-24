@@ -5,6 +5,6 @@ function (x, n = 100, conf.level = 0.95)
     p = x/n
     zstar <- -qnorm(alpha/2)
     interval <- p + c(-1, 1) * zstar * sqrt(p * (1 - p)/n)
-    attr("conf.level", interval) <- conf.level
+    attr(interval, "conf.level") <- conf.level
     return(interval)
 }

@@ -3,10 +3,11 @@
 \title{ Lattice Theme }
 \description{ A theme for use with lattice graphics. }
 \usage{
-col.fastR(bw = FALSE)
+col.fastR(bw = FALSE, lty=1:7)
 }
 \arguments{
-  \item{\code{bw}}{whether color scheme should be "black and white"}
+  \item{bw}{whether color scheme should be "black and white"}
+  \item{lty}{vector of line type codes}
 }
 \value{
 Returns a list that can be supplied as the \code{theme} to 
@@ -21,8 +22,8 @@ of the book \cite{Foundations and Applications of Statistics}
 }
 
 \seealso{
-\code{\link{trellis.par.set()}}, 
-\code{\link{show.settings()}} 
+\code{\link{trellis.par.set}}, 
+\code{\link{show.settings}} 
 }
 \examples{
 trellis.par.set(theme=col.fastR(bw=TRUE))
