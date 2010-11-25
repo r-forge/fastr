@@ -8,6 +8,6 @@ Maintainer: Randall Pruim <rpruim@calvin.edu>
 Description: Data sets and utilities for Foundations and Applications of Statistics:an Introduction using R by R Pruim
 License: GPL (>=2)
 Depends: lattice, grid
-Suggests: MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry  
+Suggests: MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry, cubature, Devore6
 LazyLoad: yes
 LazyData: yes

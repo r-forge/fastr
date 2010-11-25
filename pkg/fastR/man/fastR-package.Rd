@@ -16,7 +16,7 @@ Type: \tab Package\cr
 Version: \tab 0.2-1\cr
 Date: \tab 2010-11-24\cr
 Depends: \tab lattice, grid\cr
-Suggests: \tab MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry  
+Suggests: \tab MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry 
 \cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
