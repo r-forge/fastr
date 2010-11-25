@@ -8,7 +8,7 @@ function (sample, rdata, FUN, direction = 2, stemplot = dim(rdata)[direction] <
     cat("\n")
     stats <- apply(rdata, direction, FUN)
     cat("\nTest Stat applied to sample data = ")
-    cat(dstat)
+    cat(signif(dstat, 4))
     cat("\n\n")
     cat("Test Stat applied to random data:\n\n")
     print(quantile(stats, q))
@@ -23,13 +23,13 @@ function (sample, rdata, FUN, direction = 2, stemplot = dim(rdata)[direction] <
     cat("\tOf the random samples")
     cat("\n\t\t", paste(sum(stats < dstat), "(", round(100 * 
         sum(stats < dstat)/length(stats), 2), "% )", "had test stats <", 
-        dstat))
+        signif(dstat, 4)))
     cat("\n\t\t", paste(sum(stats == dstat), "(", round(100 * 
         sum(stats == dstat)/length(stats), 2), "% )", "had test stats =", 
-        dstat))
+        signif(dstat, 4)))
     cat("\n\t\t", paste(sum(stats > dstat), "(", round(100 * 
         sum(stats > dstat)/length(stats), 2), "% )", "had test stats >", 
-        dstat))
+        signif(dstat, 4)))
     cat("\n")
     invisible(plot1)
 }

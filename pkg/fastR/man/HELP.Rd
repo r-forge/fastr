@@ -5,8 +5,9 @@
 \title{HELP -- Health Evaluation and Linkage to Primary Care}
 \description{ Data recorded for inpatient subjects at a detoxification unit.
 }
-\usage{data(HELP)}
-\usage{data(HELPbig)}
+\usage{data(HELP)
+
+data(HELPbig)}
 \details{
 The HELP (Health Evaluation and Linkage to Primary Care) study was a clinical
 trial for adult inpatients recruited from a detoxification unit. Patients with

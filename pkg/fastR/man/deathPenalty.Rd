@@ -6,8 +6,11 @@
 \description{
 A famous example of Simpson's paradox.
 }
-\usage{data(deathPenalty)}
-\usage{data(deathPeny)}
+\usage{
+data(deathPenalty)
+
+data(deathPeny)
+}
 \format{
   A data frame with 326 observations.  The factors are coded more succinctly
   in \code{deathPen}, but otherwise the data are the same.

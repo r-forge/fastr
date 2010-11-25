@@ -9,8 +9,11 @@ Taste test data
 Tthe results from a study comparing
 different preparation methods for taste test samples.
 }
-\usage{data(tastetest)}
-\usage{data(taste1)}
+\usage{
+data(tastetest)
+
+data(taste1)
+}
 \format{
   A data frame with 16 observations on 2 (\code{taste1}) or 4
   (\code{tastetest}) variables.
