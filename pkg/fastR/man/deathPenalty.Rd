@@ -9,7 +9,7 @@ A famous example of Simpson's paradox.
 \usage{
 data(deathPenalty)
 
-data(deathPeny)
+data(deathPen)
 }
 \format{
   A data frame with 326 observations.  The factors are coded more succinctly

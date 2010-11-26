@@ -13,8 +13,8 @@ by Randall Pruim.
 \tabular{ll}{
 Package: \tab fastR\cr
 Type: \tab Package\cr
-Version: \tab 0.2-1\cr
-Date: \tab 2010-11-24\cr
+Version: \tab 0.2-2\cr
+Date: \tab 2010-11-26\cr
 Depends: \tab lattice, grid\cr
 Suggests: \tab MASS, faraway, Hmisc, DAAG, multcomp, vcd, car, alr3, corrgram, BradleyTerry 
 \cr
@@ -34,22 +34,6 @@ R. Pruim,
 AMS, 2011, to appear.
 }
 \keyword{ package, datasets }
-\seealso{
-Other packages used in the text include:
-\code{\link[lattice:lattice-package]{lattice}},
-\code{\link[grid:grid-package]{grid}},
-\code{\link[faraway:faraway-package]{faraway}},
-\code{\link[Hmisc:Hmisc-package]{Hmisc}},
-\code{\link[DAAG:DAAG-package]{DAAG}},
-\code{\link[MASS:MASS-package]{MASS}},
-\code{\link[multcomp:multcomp-package]{multcomp}},
-\code{\link[vcd:vcd-package]{vcd}},
-\code{\link[corrgram:corrgram-package]{corrgram}},
-\code{\link[BradleyTerry:BradleyTerry-package]{BradleyTerry}},
-\code{\link[alr3:alr3-package]{alr3}},
-and
-\code{\link[car:car-package]{car}} 
-}
 \examples{
 require(fastR)
 trellis.par.set(theme=col.fastR())

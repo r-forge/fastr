@@ -8,8 +8,22 @@ the efficacy of different forms of dry ice application in reducing the temperatu
 of the calf muscle.
 }
 \usage{data(ice)}
-\format{
-  A data frame with 72 observations on the following 330 variables.
+
+\details{
+The 12 subjects in this study came three times, at 
+least four days apart, and received one of three ice treatments (cubed ice, crushed 
+ice, or ice mixed with water). In each case, the ice was prepared in a plastic bag 
+and applied dry to the subjects calf muscle. 
+The temperature measurements were taken on the skin surface and inside the 
+calf muscle (via a 4 cm long probe) every 30 seconds for 20 minutes prior to icing, 
+for 20 minutes during icing, and for 2 hours after the ice had been removed. 
+The temperature measurements are stored in variables that begin with \code{B} (baseline), 
+\code{T} (treatment), or \code{R} (recovery) followed by a numerical code for the elapsed 
+time formed by concatenating the number of minutes and seconds. For example, 
+\code{R1230} contains the temperatures 12 minutes and 30 seconds after the ice had been 
+removed. 
+
+Variables include
   \describe{
     \item{\code{Subject}}{identification number}
     \item{\code{Sex}}{a factor with levels \code{female} \code{male}}
@@ -33,20 +47,6 @@ of the calf muscle.
     \item{\code{R100}}{recovery temperature 1 minute after start of recovery}
     \item{\code{R12000}}{recovery temperature 120 minutes after start of recovery}
   }
-}
-\details{
-The 12 subjects in this study came three times, at 
-least four days apart, and received one of three ice treatments (cubed ice, crushed 
-ice, or ice mixed with water). In each case, the ice was prepared in a plastic bag 
-and applied dry to the subjects calf muscle. 
-The temperature measurements were taken on the skin surface and inside the 
-calf muscle (via a 4 cm long probe) every 30 seconds for 20 minutes prior to icing, 
-for 20 minutes during icing, and for 2 hours after the ice had been removed. 
-The temperature measurements are stored in variables that begin with B (baseline), 
-T (treatment), or R (recovery) followed by a numerical code for the elapsed 
-time formed by concatenating the number of minutes and seconds. For example, 
-\code{R1230} contains the temperatures 12 minutes and 30 seconds after the ice had been 
-removed. 
 }
 \source{
 Dykstra, J. H., Hill, H. M., Miller, M. G., Michael T. J., Cheatham, C. C., and Baker,

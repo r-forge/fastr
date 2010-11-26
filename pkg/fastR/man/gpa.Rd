@@ -12,7 +12,7 @@ GPA, ACT, and SAT scores for a sample of students.
     \item{\code{satm}}{SAT mathematics score}
     \item{\code{satv}}{SAT verbal score}
     \item{\code{act}}{ACT score}
-    \item{\code{gpa}}{grade point average}
+    \item{\code{gpa}}{college grade point average}
   }
 }
 \examples{

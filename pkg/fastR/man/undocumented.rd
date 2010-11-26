@@ -1,6 +1,7 @@
 \name{undocumented}
-\alias{anova.details}
-\alias{t.test.summary}
+\alias{xaov}
+\alias{xaov.default}
+\alias{xaov.formula}
 \alias{tdf}
 \alias{dotPlot}
 \alias{panel.dotPlot}
@@ -20,7 +21,7 @@
 \alias{stemplot.data.frame}
 \alias{stemplot.numeric}
 \alias{funvec}
-\alias{given.order}
+\alias{givenOrder}
 \alias{make.rm}
 \alias{multirandom}
 \alias{nlmax}

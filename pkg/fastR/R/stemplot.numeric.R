@@ -1,7 +1,7 @@
 stemplot.numeric <-
 function (x, unit, split, Min, Max, rule.line = c("Dixon", "Velleman", 
     "Sturges"), style = c("bare", "Tukey"), trim.outliers = TRUE, 
-    depths = TRUE, reverse.negative.leaves = TRUE) 
+    depths = TRUE, reverse.negative.leaves = TRUE, ...) 
 {
     data <- x
     rule.line <- match.arg(rule.line)
