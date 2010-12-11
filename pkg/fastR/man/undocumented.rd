@@ -39,7 +39,7 @@
 \alias{project}
 \alias{vlength}
 \alias{to2d}
-\alias{read.table2}
+\alias{read.file}
 \title{Undocumented functions}
 \description{Documentation is still pending for this functions}
 \author{Randall Pruim}
