@@ -1,0 +1,7 @@
+concrete.lmfull <- lm(strength ~ water * limestone, concrete)
+concrete.nolime <- lm(strength ~ water + limestone:water, concrete)
+concrete.nowater <- lm(strength ~ limestone + limestone:water, concrete)
+concrete.noint <- lm(strength ~ limestone + water, concrete)
+anova(concrete.nolime,concrete.lmfull)
+anova(concrete.nowater,concrete.lmfull)
+anova(concrete.noint,concrete.lmfull)

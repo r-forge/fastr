@@ -1,0 +1,5 @@
+require(alr3); data(heights)
+height.xy <- xyplot(Dheight~Mheight,heights)
+height.lm <- lm(Dheight~Mheight,heights)
+summary(height.lm)
+anova(height.lm)

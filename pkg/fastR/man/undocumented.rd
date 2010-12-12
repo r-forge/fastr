@@ -31,7 +31,6 @@
 \alias{print.stemplot}
 \alias{show.fumbles}
 \alias{show.poisson}
-\alias{snippet}
 \alias{statTally}
 \alias{surround}
 \alias{dot}

@@ -1,0 +1,14 @@
+v0 <- rep(1,4); v0
+u0 <- v0/vlength(v0); u0
+v1 <- x - mean(x); v1
+u1 <- v0/vlength(v1); u1
+project(y,v1)
+# two ways to compute beta_0-hat
+project(y,v1)/vlength(v1) -> b1; b1
+dot(y,v1)/(vlength(v1))^2 -> b1; b1
+project(y,v0)
+# two ways to compute alpha_0-hat
+project(y,v0)/vlength(v0) -> a0; a0
+dot(y,v0)/(vlength(v0))^2 -> a0; a0
+# beta_1-hat
+a0 + b1 * mean(x)
