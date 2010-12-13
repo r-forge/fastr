@@ -6,16 +6,30 @@ function (name, execute = TRUE, view = !execute, echo = TRUE,
     package <- "fastR"
     paths <- .find.package(package, lib.loc, verbose = verbose)
     paths <- paths[file_test("-d", file.path(paths, "snippet"))]
-    if (!character.only) 
-        name <- as.character(substitute(name))
+    if (missing(name)) {
+        noName = TRUE
+    }
+    else {
+        noName = FALSE
+    }
     available <- character(0L)
     paths <- file.path(paths, "snippet")
+    if (missing(name)) {
+        for (p in paths) {
+            files <- basename(tools::list_files_with_type(p, 
+                "code"))
+            available <- c(available, tools::file_path_sans_ext(files))
+        }
+        return(available)
+    }
     for (p in paths) {
         files <- basename(tools::list_files_with_type(p, "code"))
         files <- files[name == tools::file_path_sans_ext(files)]
         if (length(files)) 
             available <- c(available, file.path(p, files))
     }
+    if (!character.only) 
+        name <- as.character(substitute(name))
     if (length(available) == 0L) 
         stop(gettextf("No snippet named '%s'", name), domain = NA)
     if (length(available) > 1L) {
@@ -34,9 +48,6 @@ function (name, execute = TRUE, view = !execute, echo = TRUE,
     if (echo) {
         cat("\n\n", "\tsnippet(", name, ")\n", "\t------- ", 
             rep.int("~", nchar(name, type = "w")), "\n", sep = "")
-        if (ask && interactive()) {
-            readline("\nType  <Return>\t to start : ")
-        }
     }
     if (view) {
         file <- srcfile(available)
@@ -44,6 +55,9 @@ function (name, execute = TRUE, view = !execute, echo = TRUE,
         cat(paste(lines, collapse = "\n"))
     }
     if (execute) {
+        if (ask && interactive()) {
+            readline("\nType  <Return>\t to start : ")
+        }
         source(available, echo = echo, max.deparse.length = Inf, 
             keep.source = TRUE)
     }
