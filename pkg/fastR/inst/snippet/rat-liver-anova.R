@@ -1,1 +1,0 @@
-anova(rat.lm)
