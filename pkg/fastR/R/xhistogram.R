@@ -1,7 +1,8 @@
 xhistogram <-
-function (..., type = "density", labels = F, density = FALSE, 
-    fit = NULL, start = NULL) 
+function (x, data, ..., type = "density", labels = F, density = FALSE, 
+	panel=panel.xhistoram,
+    fit = NULL, start = NULL, groups=NULL) 
 {
-    histogram(..., panel = panel.xhistogram, type = type, fit = fit, 
+    histogram(x, data, groups, ..., panel = panel, type = type, fit = fit, 
         start = start, labels = labels, density = density)
 }
