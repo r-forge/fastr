@@ -1,11 +1,23 @@
 statTally <-
-function (sample, rdata, FUN, direction = 2, stemplot = dim(rdata)[direction] < 
-    201, q = c(0.5, 0.9, 0.95, 0.99), ...) 
+function (sample, rdata, FUN, direction = NULL, 
+	stemplot = dim(rdata)[direction] < 201, q = c(0.5, 0.9, 0.95, 0.99), fun, ...) 
 {
+	if (missing(FUN)) {
+		FUN = fun
+	}
+	if ( is.null(direction) ) {
+		if ( dim(rdata) [1] == length(sample) ) {
+			direction <- 2
+		} else if ( dim(rdata) [2] == length(sample) ) {
+			direction <- 1
+		} else {
+			stop("sample and rdata have incompatible dimensions")
+		}
+	}
     dstat <- FUN(sample)
-    cat("Test Stat function:\n\n")
-    print(FUN)
-    cat("\n")
+    cat("Test Stat function: ")
+	cat(deparse(substitute(FUN)))
+    cat("\n\n")
     stats <- apply(rdata, direction, FUN)
     cat("\nTest Stat applied to sample data = ")
     cat(signif(dstat, 4))
@@ -20,14 +32,14 @@ function (sample, rdata, FUN, direction = 2, stemplot = dim(rdata)[direction] <
         panel.abline(v = dstat, col = trellis.par.get("plot.line")$col, 
             lwd = 3)
     })
-    cat("\tOf the random samples")
-    cat("\n\t\t", paste(sum(stats < dstat), "(", round(100 * 
+    cat("\nOf the random samples")
+    cat("\n\t", paste(sum(stats < dstat), "(", round(100 * 
         sum(stats < dstat)/length(stats), 2), "% )", "had test stats <", 
         signif(dstat, 4)))
-    cat("\n\t\t", paste(sum(stats == dstat), "(", round(100 * 
+    cat("\n\t", paste(sum(stats == dstat), "(", round(100 * 
         sum(stats == dstat)/length(stats), 2), "% )", "had test stats =", 
         signif(dstat, 4)))
-    cat("\n\t\t", paste(sum(stats > dstat), "(", round(100 * 
+    cat("\n\t", paste(sum(stats > dstat), "(", round(100 * 
         sum(stats > dstat)/length(stats), 2), "% )", "had test stats >", 
         signif(dstat, 4)))
     cat("\n")

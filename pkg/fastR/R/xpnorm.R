@@ -1,5 +1,5 @@
 xpnorm <-
-function (q, mean = 0, sd = 1, plot = TRUE, verbose = TRUE, digits = 5, 
+function (q, mean = 0, sd = 1, plot = TRUE, verbose = TRUE, digits = 4, 
     lower.tail = TRUE, log.p = FALSE, ...) 
 {
     p = pnorm(q, mean = mean, sd = sd, lower.tail = lower.tail, 
@@ -9,7 +9,7 @@ function (q, mean = 0, sd = 1, plot = TRUE, verbose = TRUE, digits = 5,
         cat(paste("\tP(X <= ", q, ") = P(Z <= ", round(z, 3), 
             ") = ", p, "\n", sep = ""))
         cat(paste("\tP(X >  ", q, ") = P(Z <  ", round(z, 3), 
-            ") = ", 1 - p, "\n", sep = ""))
+            ") = ", round(1 - p,digits), "\n", sep = ""))
         cat("\n")
     }
     if (plot & length(q) == 1) {
